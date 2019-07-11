@@ -1,7 +1,7 @@
 {
   "name": "react-awesome-player",
   "version": "1.0.6",
-  "description": "react awesome player",
+  "description": "video.js component for React",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,8 +10,22 @@
     "deploy": "gh-pages -d example/dist",
     "publish-demo": "npm run build && npm run deploy && npx babel src --out-dir lib && npm publish"
   },
-  "keywords": ["react", "react-video-player", "react-awesome-player", "video-player"],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/surmon-china/vue-video-player.git"
+  },
+  "keywords": [
+    "react-video-player",
+    "react-awesome-player",
+    "react video player",
+    "video player",
+    "react player",
+    "react video"
+  ],
+  "author": {
+    "name": "Peng Zhang",
+    "email": "returnzp@gmail.com"
+  },
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.2.3",

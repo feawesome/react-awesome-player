@@ -1,6 +1,20 @@
+[![GitHub stars](https://img.shields.io/github/stars/peng666/react-awesome-player.svg?style=flat-square)](https://github.com/peng666/react-awesome-player/stargazers)
+[![Build Status](https://travis-ci.org/peng666/react-awesome-player.svg?branch=master)](https://travis-ci.org/peng666/react-awesome-player)
+[![GitHub issues](https://img.shields.io/github/issues/peng666/react-awesome-player.svg?style=flat-square)](https://github.com/peng666/react-awesome-player/issues)
+[![GitHub forks](https://img.shields.io/github/forks/peng666/react-awesome-player.svg?style=flat-square)](https://github.com/peng666/react-awesome-player/network)
+[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square)](https://github.com/peng666/react-awesome-player)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/peng666/react-awesome-player)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/peng666/react-awesome-player.svg?style=flat-square)](https://twitter.com/intent/tweet?url=https://github.com/peng666/react-awesome-player)
+
+[![NPM](https://nodei.co/npm/react-awesome-player.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-awesome-player/)
+[![NPM](https://nodei.co/npm-dl/react-awesome-player.png?months=9&height=3)](https://nodei.co/npm/react-awesome-player/)
+
+
 ## React-Awesome-Player
 
 [video.js](https://github.com/videojs/video.js) player component for React.
+
+Develop by video.js, perfectly compatible with React , support subtitle display, the live stream of HLS and so on, it is a awesome plugin for playing video in webpage, If something goes wrong during use, you can submit the issue in this repository, or send email to author: **returnzp@gmail.com**
 
 ## Example
 
