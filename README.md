@@ -1,5 +1,4 @@
 [![GitHub stars](https://img.shields.io/github/stars/peng666/react-awesome-player.svg?style=flat-square)](https://github.com/peng666/react-awesome-player/stargazers)
-[![Build Status](https://travis-ci.org/peng666/react-awesome-player.svg?branch=master)](https://travis-ci.org/peng666/react-awesome-player)
 [![GitHub issues](https://img.shields.io/github/issues/peng666/react-awesome-player.svg?style=flat-square)](https://github.com/peng666/react-awesome-player/issues)
 [![GitHub forks](https://img.shields.io/github/forks/peng666/react-awesome-player.svg?style=flat-square)](https://github.com/peng666/react-awesome-player/network)
 [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square)](https://github.com/peng666/react-awesome-player)
