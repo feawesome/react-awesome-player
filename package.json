@@ -10,9 +10,9 @@
     "deploy": "gh-pages -d example/dist",
     "publish-demo": "npm run build && npm run deploy"
   },
-  "keywords": [],
+  "keywords": ["react", "react-video-player", "react-awesome-player", "video-player"],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
