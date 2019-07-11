@@ -52,6 +52,8 @@ class FlexibleVideo extends React.Component {
       fluid: true,
       poster: '', // 封面图
       sources: [],
+      subtitles: [],
+      defaultSubtitle: ''
       // width: document.documentElement.clientWidth,
     },
   }
@@ -136,7 +138,7 @@ class FlexibleVideo extends React.Component {
   }
 
   render() {
-    const { subtitles, defaultSubtitle } = this.props.options;
+    const { subtitles, defaultSubtitle } = this.state.options;
 
     return (
       <video className="video-js react-awesome-player" ref={this.videoRef}>
