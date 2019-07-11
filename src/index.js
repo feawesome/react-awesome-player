@@ -6,6 +6,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import ObjectPath from 'object-path'
 
 // lib
 import 'video.js/dist/video-js.css';
@@ -59,7 +60,10 @@ class FlexibleVideo extends React.Component {
   }
 
   componentDidMount() {
-    if (!this.player && this.props.options && this.props.options.sources.length) {
+    const sources = ObjectPath(this.props).get('options.sources') || []
+    const isSource = sources.length
+
+    if (!this.player && isSource) {
       this.initialize();
     }
   }
@@ -81,7 +85,9 @@ class FlexibleVideo extends React.Component {
   }
 
   resetUrl() {
-    this.props.options.sources[0] && this.player.src(this.props.options.sources[0].src);
+    const sources = ObjectPath(this.props).get('options.sources') || []
+
+    sources[0] && this.player.src(sources[0].src);
     this.player.poster(this.props.options.poster);
   }
 
