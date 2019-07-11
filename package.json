@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --open development",
     "build": "webpack --mode production",
     "deploy": "gh-pages -d example/dist",
-    "publish-demo": "npm run build && npm run deploy && npx babel src --out-dir lib && npm publish"
+    "publish-demo": "npm run build && npm run deploy && npx babel src --out-dir lib"
   },
   "repository": {
     "type": "git",
