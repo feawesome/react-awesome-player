@@ -1,6 +1,6 @@
 {
   "name": "react-awesome-player",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "react awesome player",
   "main": "lib/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --open development",
     "build": "webpack --mode production",
     "deploy": "gh-pages -d example/dist",
-    "publish-demo": "npm run build && npm run deploy"
+    "publish-demo": "npm run build && npm run deploy && npx babel src --out-dir lib && npm publish"
   },
   "keywords": ["react", "react-video-player", "react-awesome-player", "video-player"],
   "author": "",

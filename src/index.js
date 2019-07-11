@@ -27,7 +27,7 @@ const DEFAULT_EVENTS = [
 ];
 
 /* eslint-disable react/prefer-stateless-function */
-class FlexibleVideo extends React.Component {
+class ReactAwesomePlayer extends React.Component {
   video = null
   reseted = true
 
@@ -163,7 +163,7 @@ class FlexibleVideo extends React.Component {
   }
 }
 
-FlexibleVideo.propTypes = {
+ReactAwesomePlayer.propTypes = {
   sourceType: PropTypes.string,
   subtitlesZh: PropTypes.string,
   subtitlesEn: PropTypes.string,
@@ -184,4 +184,4 @@ FlexibleVideo.propTypes = {
   timeupdate: PropTypes.func,
 };
 
-export default FlexibleVideo;
+export default ReactAwesomePlayer;
