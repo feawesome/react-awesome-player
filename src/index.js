@@ -75,7 +75,7 @@ class ReactAwesomePlayer extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.options !== prevProps.options) {
+    if (this.player && this.props.options !== prevProps.options) {
       this.resetUrl();
     }
   }
