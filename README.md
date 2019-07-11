@@ -9,7 +9,7 @@
 [![NPM](https://nodei.co/npm-dl/react-awesome-player.png?months=9&height=3)](https://nodei.co/npm/react-awesome-player/)
 
 
-## React-Awesome-Player
+## react-awesome-player
 
 [video.js](https://github.com/videojs/video.js) player component for React.
 
@@ -70,8 +70,8 @@ class App extends React.Component {
   ended() {
     console.log('ended')
   }
-  erro() {
-    console.log('erro')
+  error() {
+    console.log('error')
   }
 
   render () {
@@ -86,7 +86,7 @@ class App extends React.Component {
       waiting={this.waiting}
       playing={this.playing}
       ended={this.ended}
-      erro={this.erro}
+      error={this.error}
     />
   }
 }

@@ -47,8 +47,8 @@ class App extends React.Component {
   ended() {
     console.log('ended')
   }
-  erro() {
-    console.log('erro')
+  error() {
+    console.log('error')
   }
 
   // componentDidMount() {
@@ -90,7 +90,7 @@ class App extends React.Component {
         waiting={this.waiting}
         playing={this.playing}
         ended={this.ended}
-        erro={this.erro}
+        error={this.error}
       />
     </div>
   }
