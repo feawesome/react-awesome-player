@@ -5,7 +5,7 @@ import ReactAwesomePlayer from '../../src'
 class App extends React.Component {
   state = {
     options: {
-      poster: "https://video.myhbp.org.cn/videoCover/2dfe64cfe229b23df1c7ab2969d618a0.jpg?OSSAccessKeyId=LTAI7hc8DeH5YRB8&Expires=1563073114&Signature=lXHsKrRO%2FcFzmFXHANZh7GRKytk%3D",
+      poster: "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=854361313,3188166359&fm=26&gp=0.jpg",
       sources: [{
         type: "video/mp4",
         src: "https://cdn.theguardian.tv/webM/2015/07/20/150716YesMen_synd_768k_vp8.webm"
@@ -79,18 +79,20 @@ class App extends React.Component {
 
   render () {
     const { options } = this.state
-    return <ReactAwesomePlayer
-      options={options}
-      loadeddata={this.loadeddata}
-      canplay={this.canplay}
-      canplaythrough={this.canplaythrough}
-      play={this.play}
-      pause={this.pause}
-      waiting={this.waiting}
-      playing={this.playing}
-      ended={this.ended}
-      erro={this.erro}
-    />
+    return <div className="test-demo">
+      <ReactAwesomePlayer
+        options={options}
+        loadeddata={this.loadeddata}
+        canplay={this.canplay}
+        canplaythrough={this.canplaythrough}
+        play={this.play}
+        pause={this.pause}
+        waiting={this.waiting}
+        playing={this.playing}
+        ended={this.ended}
+        erro={this.erro}
+      />
+    </div>
   }
 }
 
