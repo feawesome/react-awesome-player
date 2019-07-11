@@ -13,16 +13,17 @@
 
 [video.js](https://github.com/videojs/video.js) player component for React.
 
-Develop by video.js, perfectly compatible with React , support subtitle display, the live stream of HLS and so on, it is a awesome plugin for playing video in webpage, If something goes wrong during use, you can submit the issue in this repository, or send email to author: **returnzp@gmail.com**
+Secondary development based on video.js, perfectly compatible with React , support subtitle display and the live stream of HLS. It is an awesome plugin for playing video on webpage.
+If anything goes wrong during using, please submit issues in this repository, or send email to author: **returnzp@gmail.com**
 
-## Example
+### Example
 
 * [Demo Page](https://peng666.github.io/react-awesome-player)
 * Demo Code
 ```jsx
 import React from 'react'
 import { render } from 'react-dom'
-import ReactAwesomePlayer from '../../src'
+import ReactAwesomePlayer from 'react-awesome-player'
 
 class App extends React.Component {
   state = {
@@ -95,7 +96,7 @@ render(<App />, document.getElementById('root'))
 ```
 
 
-## Install
+### Install
 #### NPM
 
 ``` bash
@@ -103,7 +104,7 @@ npm install react-awesome-player --save
 ```
 
 
-## API
+### API
 - component api:
   * `events` : `[ Array, default: [] ]` : custom videojs event to component
   * `playsinline` : `[ Boolean, default: false ]` : set player not full-screen in mobile device
@@ -114,7 +115,7 @@ npm install react-awesome-player --save
   * [video.js options](http://docs.videojs.com/tutorial-options.html)
   * [video.js docs](http://docs.videojs.com/)
 
-# videojs plugins
+### videojs plugins
 
 - [videojs-resolution-switcher](https://github.com/kmoskwiak/videojs-resolution-switcher)
 - [videojs-contrib-hls](https://github.com/videojs/videojs-contrib-hls)
@@ -126,5 +127,6 @@ npm install react-awesome-player --save
 - [more plugins...](https://github.com/search?o=desc&q=videojs+plugin&s=stars&type=Repositories&utf8=%E2%9C%93)
 
 
-# Author
+### Author
 **Peng Zhang**
+**returnzp@gmail.com**
