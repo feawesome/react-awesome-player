@@ -35,12 +35,12 @@ class App extends React.Component {
       }],
       subtitles: [{
           language: 'zh',
-          url: "https://resource.myhbp.org.cn/subtitlevtt/zh_cn/difficult%20interactions.vtt?OSSAccessKeyId=LTAI7hc8DeH5YRB8&Expires=1563073120&Signature=6bn6O4%2Byxy4Ii%2BgHy5beSkK3rVA%3D",
+          url: "https://peng666.github.io/react-awesome-player/zh.vtt",
           label: "中文"
         },
         {
           language: 'en',
-          url: "https://resource.myhbp.org.cn/subtitlevtt/en/difficult%20interactions.vtt?OSSAccessKeyId=LTAI7hc8DeH5YRB8&Expires=1563073120&Signature=3atEE9wrLDoqly%2B8wkIlSYlUoew%3D",
+          url: "https://peng666.github.io/react-awesome-player/en.vtt",
           label: "EN"
       }],
       defaultSubtitle: 'en'
