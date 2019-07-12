@@ -8,12 +8,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ObjectPath from 'object-path'
 
-// lib
-import 'video.js/dist/video-js.css';
 import videojs from 'video.js'
+import 'video.js/dist/video-js.css';
 import './index.css'
 
-// as of videojs 6.6.0
+// as of videojs 7.6.0
 const DEFAULT_EVENTS = [
   'loadeddata',
   'canplay',
@@ -26,10 +25,8 @@ const DEFAULT_EVENTS = [
   'error',
 ];
 
-/* eslint-disable react/prefer-stateless-function */
 class ReactAwesomePlayer extends React.Component {
   video = null
-  reseted = true
 
   state = {
     options: {
@@ -53,10 +50,12 @@ class ReactAwesomePlayer extends React.Component {
       fluid: true,
       poster: '', // 封面图
       sources: [],
-      subtitles: [],
-      defaultSubtitle: ''
+      subtitles: [], // 字幕
+      defaultSubtitle: '' // 默认字幕
       // width: document.documentElement.clientWidth,
     },
+    playInline: true,
+    crossOrigin: ''
   }
 
   componentDidMount() {
@@ -68,15 +67,15 @@ class ReactAwesomePlayer extends React.Component {
     }
   }
 
-  componentWillUnmount() {
-    if (this.player) {
-      this.player.dispose();
-    }
-  }
-
   componentDidUpdate(prevProps) {
     if (this.player && this.props.options !== prevProps.options) {
       this.resetUrl();
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.player) {
+      this.player.dispose();
     }
   }
 
@@ -92,21 +91,23 @@ class ReactAwesomePlayer extends React.Component {
   }
 
   initialize() {
-    this.video.setAttribute('webkit-playsinline', true);
-    this.video.setAttribute('playsInline', true);
-    this.video.setAttribute('x5-playsinline', true);
-    this.video.setAttribute('x5-video-player-type', 'h5');
-    this.video.setAttribute('x5-video-player-fullscreen', false);
+    if (this.state.playInline) {
+      this.video.setAttribute('webkit-playsinline', true);
+      this.video.setAttribute('playsInline', true);
+      this.video.setAttribute('x5-playsinline', true);
+      this.video.setAttribute('x5-video-player-type', 'h5');
+      this.video.setAttribute('x5-video-player-fullscreen', false);
+    }
 
     // cross origin
-    if (this.crossOrigin !== '') {
-      this.video.crossOrigin = this.crossOrigin;
-      this.video.setAttribute('crossOrigin', this.crossOrigin);
+    if (this.state.crossOrigin !== '') {
+      this.video.crossOrigin = this.state.crossOrigin;
+      this.video.setAttribute('crossOrigin', this.state.crossOrigin);
     }
 
     // avoid error "VIDEOJS: ERROR: Unable to find plugin: __ob__"
     if (this.state.options.plugins) {
-      delete videoOptions.plugins.__ob__; // eslint-disable-line
+      delete videoOptions.plugins.__ob__;
     }
 
     this.setState({
@@ -116,11 +117,11 @@ class ReactAwesomePlayer extends React.Component {
       },
     }, () => {
       const context = this;
-      const videoOptions = Object.assign({}, this.state.options);
-      console.log(videoOptions)
-      this.player = videojs(this.video, videoOptions, function () { // eslint-disable-line
+
+      this.player = videojs(this.video, this.state.options, function () {
+
         // events
-        const events = DEFAULT_EVENTS.concat(this.events).concat(this.globalEvents);
+        const events = DEFAULT_EVENTS.concat(context.props.events)
 
         // watch events
         const onEdEvents = {};
@@ -136,7 +137,7 @@ class ReactAwesomePlayer extends React.Component {
         }
 
         // watch timeupdate
-        this.on('timeupdate', function () { // eslint-disable-line
+        this.on('timeupdate', function () {
           if (typeof context.props.timeupdate === 'function') context.props.timeupdate(this.currentTime());
         });
       });
@@ -169,9 +170,10 @@ ReactAwesomePlayer.propTypes = {
   subtitlesEn: PropTypes.string,
   options: PropTypes.object,
   subtitles: PropTypes.array,
-  defaultSubtitle:PropTypes.string,
+  defaultSubtitle: PropTypes.string,
+  events: PropTypes.array,
 
-  // 视频播放事件
+  // events props
   loadeddata: PropTypes.func,
   canplay: PropTypes.func,
   canplaythrough: PropTypes.func,
