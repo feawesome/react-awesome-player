@@ -25,42 +25,43 @@ const DEFAULT_EVENTS = [
   'error',
 ];
 
+const defaultState = {
+  options: {
+    controls: true, // 是否显示控制条
+    controlBar: { // 显示控制条内容
+      timeDivider: true, // 时间分割线
+      durationDisplay: true, // 显示时间
+      remainingTimeDisplay: false, // 剩余时间显示
+      fullscreenToggle: true, // 切换全屏
+      subtitlesButton: true, // 字幕按钮
+    },
+    techOrder: [
+      'html5',
+    ],
+    autoplay: false, // 自动播放
+    muted: false,
+    loop: false, // 循环播放
+    preload: 'none', // 预加载
+    // language: 'zh', // 展示语言
+    aspectRatio: '16:9', // 比例
+    fluid: true,
+    poster: '', // 封面图
+    sources: [],
+    subtitles: [], // 字幕
+    defaultSubtitle: '' // 默认字幕
+    // width: document.documentElement.clientWidth,
+  },
+  playInline: true,
+  crossOrigin: ''
+}
+
 class ReactAwesomePlayer extends React.Component {
   static defaultProps = {
     options: {}
   }
 
   video = null
-
-  state = {
-    options: {
-      controls: true, // 是否显示控制条
-      controlBar: { // 显示控制条内容
-        timeDivider: true, // 时间分割线
-        durationDisplay: true, // 显示时间
-        remainingTimeDisplay: false, // 剩余时间显示
-        fullscreenToggle: true, // 切换全屏
-        subtitlesButton: true, // 字幕按钮
-      },
-      techOrder: [
-        'html5',
-      ],
-      autoplay: false, // 自动播放
-      muted: false,
-      loop: false, // 循环播放
-      preload: 'none', // 预加载
-      // language: 'zh', // 展示语言
-      aspectRatio: '16:9', // 比例
-      fluid: true,
-      poster: '', // 封面图
-      sources: [],
-      subtitles: [], // 字幕
-      defaultSubtitle: '' // 默认字幕
-      // width: document.documentElement.clientWidth,
-    },
-    playInline: true,
-    crossOrigin: ''
-  }
+  state = defaultState
 
   componentDidMount() {
     const sources = ObjectPath(this.props).get('options.sources') || []
