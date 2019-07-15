@@ -4,11 +4,11 @@
 .video-js {
   height: auto;
 }
-.video-player {
+.react-awesome-player-container {
   /* position: relative; */
 }
 
-.video-player button {
+.react-awesome-player-container button {
   outline: none;
 }
 
@@ -17,18 +17,20 @@
 }
 
 /* 声音 */
-.video-player .video-js .vjs-volume-panel-horizontal {
+.react-awesome-player-container .video-js .vjs-volume-panel-horizontal {
   display: none !important;
 }
 
 /* 显示时间 */
-.video-player .video-js .vjs-control-bar .vjs-current-time {
+.react-awesome-player-container .video-js .vjs-control-bar .vjs-current-time {
   padding: 0;
   display: block !important;
 }
-
+.vjs-picture-in-picture-control {
+  display: none !important;
+}
 /* 显示时间 */
-.video-player .video-js .vjs-time-divider {
+.react-awesome-player-container .video-js .vjs-time-divider {
   padding: 0 2px;
   min-width: 0em;
   text-align: center;
@@ -36,7 +38,7 @@
 }
 
 /* 显示时间 */
-.video-player .video-js .vjs-control-bar .vjs-duration {
+.react-awesome-player-container .video-js .vjs-control-bar .vjs-duration {
   padding: 0;
   display: block !important;
 }
@@ -45,18 +47,18 @@
   position: unset;
 }
 
-.video-player video {
+.react-awesome-player-container video {
   object-fit: fill;
 }
 
-.video-player .vjs-fullscreen video {
+.react-awesome-player-container .vjs-fullscreen video {
   object-fit: contain;
 }
 
-.video-player .video-layer {
+.react-awesome-player-container .video-layer {
 }
 
-.video-player .video-layer section {
+.react-awesome-player-container .video-layer section {
   width: 100%;
   height: 100%;
   display: flex;
@@ -67,14 +69,14 @@
   box-shadow: 0px 0px 30px 1px #103136 inset;
 }
 
-.video-player .video-layer .loader {
+.react-awesome-player-container .video-layer .loader {
   position: relative;
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
 
-.video-player .video-layer .loader-1 .loader-outter {
+.react-awesome-player-container .video-layer .loader-1 .loader-outter {
   position: absolute;
   border: 4px solid #b50136;
   border-left-color: transparent;
@@ -87,7 +89,7 @@
   animation: loader-1-outter 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
 }
 
-.video-player .video-layer .loader-1 .loader-inner {
+.react-awesome-player-container .video-layer .loader-1 .loader-inner {
   position: absolute;
   border: 4px solid #b50136;
   border-radius: 50%;
@@ -170,6 +172,10 @@
   overflow: initial;
 }
 
+.vjs-menu .vjs-menu-content li:first-child{
+  display: none;
+}
+
 .vjs-menu-content {
   overflow-y: hidden;
 }
@@ -222,9 +228,9 @@
   content: '\e646' !important;
 } */
 
-/* .video-player .vjs-icon-play:before,
-.video-player .video-js .vjs-big-play-button .vjs-icon-placeholder:before,
-.video-player .video-js .vjs-play-control .vjs-icon-placeholder:before {
+/* .react-awesome-player-container .vjs-icon-play:before,
+.react-awesome-player-container .video-js .vjs-big-play-button .vjs-icon-placeholder:before,
+.react-awesome-player-container .video-js .vjs-play-control .vjs-icon-placeholder:before {
   font-size: 14px;
   content: '\e643' !important;
 } */

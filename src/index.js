@@ -152,19 +152,21 @@ class ReactAwesomePlayer extends React.Component {
     const { subtitles, defaultSubtitle } = this.state.options;
 
     return (
-      <video className="video-js react-awesome-player" ref={this.videoRef}>
-        {subtitles && subtitles.map(
-          (item, index) =>
-            <track
-              key={index}
-              src={item.url}
-              kind="captions"
-              srcLang={item.language}
-              label={item.label}
-              default={item.language === defaultSubtitle} />
-          )}
-      </video>
-    );
+      <div className="react-awesome-player-container">
+        <video className="video-js react-awesome-player" ref={this.videoRef}>
+          {subtitles && subtitles.map(
+            (item, index) =>
+              <track
+                key={index}
+                src={item.url}
+                kind="captions"
+                srcLang={item.language}
+                label={item.label}
+                default={item.language === defaultSubtitle} />
+            )}
+        </video>
+      </div>
+    )
   }
 }
 
