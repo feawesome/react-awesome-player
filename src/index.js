@@ -26,6 +26,10 @@ const DEFAULT_EVENTS = [
 ];
 
 class ReactAwesomePlayer extends React.Component {
+  static defaultProps = {
+    options: {}
+  }
+
   video = null
 
   state = {
@@ -165,11 +169,7 @@ class ReactAwesomePlayer extends React.Component {
 }
 
 ReactAwesomePlayer.propTypes = {
-  sourceType: PropTypes.string,
-  subtitlesZh: PropTypes.string,
-  subtitlesEn: PropTypes.string,
   options: PropTypes.object,
-  subtitles: PropTypes.array,
   defaultSubtitle: PropTypes.string,
   events: PropTypes.array,
 

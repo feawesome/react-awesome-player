@@ -1,6 +1,9 @@
 .react-awesome-player * {
   outline: 0;
 }
+.video-js {
+  height: auto;
+}
 .video-player {
   /* position: relative; */
 }
