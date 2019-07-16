@@ -107,7 +107,7 @@ npm install react-awesome-player --save
 ### API
 - component api:
   * `events` : `[ Array, default: [] ]` : custom videojs event to component
-  * `playsinline` : `[ Boolean, default: true ]` : set player not full-screen in mobile device
+  * `playsInline` : `[ Boolean, default: true ]` : set player not full-screen in mobile device
   * `crossOrigin` : `[ String, default: '' ]` : set crossOrigin to video
   * `customEventName` : `[ String, default: 'statechanged' ]` : custom the state change event name
 
