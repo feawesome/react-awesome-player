@@ -84,10 +84,6 @@ class ReactAwesomePlayer extends React.Component {
     }
   }
 
-  videoRef = video => {
-    this.video = video;
-  }
-
   resetUrl() {
     const sources = ObjectPath(this.props).get('options.sources') || []
 
@@ -154,7 +150,7 @@ class ReactAwesomePlayer extends React.Component {
 
     return (
       <div className="react-awesome-player-container">
-        <video className="video-js react-awesome-player" ref={this.videoRef}>
+        <video className="video-js react-awesome-player" ref={ video => { this.video = video } }>
           {subtitles && subtitles.map(
             (item, index) =>
               <track
