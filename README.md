@@ -1,9 +1,9 @@
-[![GitHub stars](https://img.shields.io/github/stars/peng666/react-awesome-player.svg?style=flat-square)](https://github.com/peng666/react-awesome-player/stargazers)
-[![GitHub issues](https://img.shields.io/github/issues/peng666/react-awesome-player.svg?style=flat-square)](https://github.com/peng666/react-awesome-player/issues)
-[![GitHub forks](https://img.shields.io/github/forks/peng666/react-awesome-player.svg?style=flat-square)](https://github.com/peng666/react-awesome-player/network)
-[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square)](https://github.com/peng666/react-awesome-player)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/peng666/react-awesome-player)
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/peng666/react-awesome-player.svg?style=flat-square)](https://twitter.com/intent/tweet?url=https://github.com/peng666/react-awesome-player)
+[![GitHub stars](https://img.shields.io/github/stars/feawesome/react-awesome-player.svg?style=flat-square)](https://github.com/feawesome/react-awesome-player/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/feawesome/react-awesome-player.svg?style=flat-square)](https://github.com/feawesome/react-awesome-player/issues)
+[![GitHub forks](https://img.shields.io/github/forks/feawesome/react-awesome-player.svg?style=flat-square)](https://github.com/feawesome/react-awesome-player/network)
+[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square)](https://github.com/feawesome/react-awesome-player)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/feawesome/react-awesome-player)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/feawesome/react-awesome-player.svg?style=flat-square)](https://twitter.com/intent/tweet?url=https://github.com/feawesome/react-awesome-player)
 
 [![NPM](https://nodei.co/npm/react-awesome-player.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-awesome-player/)
 [![NPM](https://nodei.co/npm-dl/react-awesome-player.png?months=9&height=3)](https://nodei.co/npm/react-awesome-player/)
@@ -18,7 +18,7 @@ If anything goes wrong during using, please submit issues in this repository, or
 
 ### Example
 
-* [Demo Page](https://peng666.github.io/react-awesome-player)
+* [Demo Page](https://feawesome.github.io/react-awesome-player)
 * Demo Code
 ```jsx
 import React from 'react'
@@ -35,12 +35,12 @@ class App extends React.Component {
       }],
       subtitles: [{
           language: 'zh',
-          url: "https://peng666.github.io/react-awesome-player/zh.vtt",
+          url: "https://feawesome.github.io/react-awesome-player/zh.vtt",
           label: "中文"
         },
         {
           language: 'en',
-          url: "https://peng666.github.io/react-awesome-player/en.vtt",
+          url: "https://feawesome.github.io/react-awesome-player/en.vtt",
           label: "EN"
       }],
       defaultSubtitle: 'en'
