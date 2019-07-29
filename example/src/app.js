@@ -12,12 +12,12 @@ class App extends React.Component {
       }],
       subtitles: [{
           language: 'zh',
-          url: "https://peng666.github.io/react-awesome-player/zh.vtt",
+          url: "https://feawesome.github.io/react-awesome-player/zh.vtt",
           label: "中文"
         },
         {
           language: 'en',
-          url: "https://peng666.github.io/react-awesome-player/en.vtt",
+          url: "https://feawesome.github.io/react-awesome-player/en.vtt",
           label: "EN"
       }],
       defaultSubtitle: 'en'
