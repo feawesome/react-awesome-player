@@ -7,7 +7,9 @@
 .react-awesome-player-container {
   /* position: relative; */
 }
-
+.vjs-time-tooltip {
+  min-width: 40px;
+}
 .react-awesome-player-container button {
   outline: none;
 }
