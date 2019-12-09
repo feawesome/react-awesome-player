@@ -12,20 +12,7 @@ import videojs from 'video.js'
 import 'video.js/dist/video-js.css';
 import './index.css'
 
-// as of videojs 7.6.0
-const DEFAULT_EVENTS = [
-  'loadeddata',
-  'canplay',
-  'canplaythrough',
-  'play',
-  'pause',
-  'waiting',
-  'playing',
-  'ended',
-  'error',
-];
-
-const defaultState = {
+const DEFAULT_STATE = {
   options: {
     controls: true, // 是否显示控制条
     controlBar: { // 显示控制条内容
@@ -55,13 +42,25 @@ const defaultState = {
   crossOrigin: ''
 }
 
+const DEFAULT_EVENTS = [
+  'loadeddata',
+  'canplay',
+  'canplaythrough',
+  'play',
+  'pause',
+  'waiting',
+  'playing',
+  'ended',
+  'error',
+];
+
 class ReactAwesomePlayer extends React.Component {
   static defaultProps = {
     options: {}
   }
 
   video = null
-  state = defaultState
+  state = DEFAULT_STATE
 
   componentDidMount() {
     const sources = ObjectPath(this.props).get('options.sources') || []
@@ -92,6 +91,7 @@ class ReactAwesomePlayer extends React.Component {
   }
 
   initialize() {
+    // 添加行内播放
     if (this.state.playInline) {
       this.video.setAttribute('webkit-playsinline', true);
       this.video.setAttribute('playsInline', true);
@@ -100,15 +100,18 @@ class ReactAwesomePlayer extends React.Component {
       this.video.setAttribute('x5-video-player-fullscreen', false);
     }
 
-    // cross origin
+    // 跨域视频请求
     if (this.state.crossOrigin !== '') {
       this.video.crossOrigin = this.state.crossOrigin;
       this.video.setAttribute('crossOrigin', this.state.crossOrigin);
     }
 
-    // avoid error "VIDEOJS: ERROR: Unable to find plugin: __ob__"
+    // 防止出现报错： "VIDEOJS: ERROR: Unable to find plugin: __ob__"
     if (this.state.options.plugins) {
-      delete videoOptions.plugins.__ob__;
+      this.setState((prevState) => {
+        delete prevState.plugins.__ob__;
+        return prevState;
+      })
     }
 
     this.setState({
@@ -124,7 +127,7 @@ class ReactAwesomePlayer extends React.Component {
         // events
         const events = DEFAULT_EVENTS.concat(context.props.events)
 
-        // watch events
+        // 监听事件
         const onEdEvents = {};
         for (let i = 0; i < events.length; i += 1) {
           if (typeof events[i] === 'string' && onEdEvents[events[i]] === undefined) {
@@ -137,7 +140,7 @@ class ReactAwesomePlayer extends React.Component {
           }
         }
 
-        // watch timeupdate
+        // 监听事件更新事件
         this.on('timeupdate', function () {
           if (typeof context.props.timeupdate === 'function') context.props.timeupdate(this.currentTime());
         });
