@@ -51,32 +51,6 @@ class App extends React.Component {
     console.log('error')
   }
 
-  // componentDidMount() {
-  //   setTimeout(() => {
-  //     this.setState({
-
-  //       options: {
-  //         poster: "https://public.myhbp.org.cn/resourceimages/insightimage/kS2tsBPjWMwxNS8G66aZaJ4iN2EbjFAj.jpg",
-  //         sources: [{
-  //           type: "'application/x-mpegURL'",
-  //           src: "https://video.myhbp.org.cn/lesson/2dfe64cfe229b23df1c7ab2969d618a0/sd/video.m3u8?OSSAccessKeyId=LTAI7hc8DeH5YRB8&Expires=1562817520&Signature=lhD6pMFBaWOfm8DuYE2fGxfZHD4%3D"
-  //         }],
-  //         subtitles: [{
-  //             language: 'zh',
-  //             url: "https://resource.myhbp.org.cn/subtitlevtt/zh_cn/difficult%20interactions.vtt?OSSAccessKeyId=LTAI7hc8DeH5YRB8&Expires=1563073120&Signature=6bn6O4%2Byxy4Ii%2BgHy5beSkK3rVA%3D",
-  //             label: "中文"
-  //           },
-  //           {
-  //             language: 'en',
-  //             url: "https://resource.myhbp.org.cn/subtitlevtt/en/difficult%20interactions.vtt?OSSAccessKeyId=LTAI7hc8DeH5YRB8&Expires=1563073120&Signature=3atEE9wrLDoqly%2B8wkIlSYlUoew%3D",
-  //             label: "EN"
-  //         }],
-  //         defaultSubtitle: 'en'
-  //       }
-  //     })
-  //   }, 3000)
-  // }
-
   render () {
     const { options } = this.state
     return <div className="test-demo">
