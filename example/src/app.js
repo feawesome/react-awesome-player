@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import ReactAwesomePlayer from 'react-awesome-player'
+import ReactAwesomePlayer from '../../src/'
 
 class App extends React.Component {
   state = {
