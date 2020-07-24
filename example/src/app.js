@@ -55,6 +55,7 @@ class App extends React.Component {
     const { options } = this.state
     return <div className="test-demo">
       <ReactAwesomePlayer
+        onRef={video => { console.log(video) }}
         options={options}
         loadeddata={this.loadeddata}
         canplay={this.canplay}

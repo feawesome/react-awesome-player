@@ -150,10 +150,16 @@ class ReactAwesomePlayer extends React.Component {
 
   render() {
     const { subtitles, defaultSubtitle } = this.state.options;
+    const { onRef } = this.props;
 
     return (
       <div className="react-awesome-player-container">
-        <video className="video-js react-awesome-player" ref={ video => { this.video = video } }>
+        <video className="video-js react-awesome-player" ref={
+          video => {
+            this.video = video
+            onRef && onRef(video)
+          }
+        }>
           {subtitles && subtitles.map(
             (item, index) =>
               <track
@@ -174,6 +180,7 @@ ReactAwesomePlayer.propTypes = {
   options: PropTypes.object,
   defaultSubtitle: PropTypes.string,
   events: PropTypes.array,
+  onRef: PropTypes.func,
 
   // events props
   loadeddata: PropTypes.func,
