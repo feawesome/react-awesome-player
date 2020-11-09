@@ -1,6 +1,6 @@
 {
   "name": "react-awesome-player",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "video.js component for React",
   "main": "lib/index.js",
   "scripts": {
@@ -45,7 +45,7 @@
     "@babel/plugin-proposal-class-properties": "^7.5.0",
     "css-loader": "^3.0.0",
     "object-path": "^0.11.4",
-    "react-awesome-player": "^1.0.12",
+    "react-awesome-player": "^1.1.0",
     "style-loader": "^0.23.1",
     "video.js": "^7.6.0"
   }
